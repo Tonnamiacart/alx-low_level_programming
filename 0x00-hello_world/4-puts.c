@@ -1,4 +1,12 @@
 #include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Description: some text
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 

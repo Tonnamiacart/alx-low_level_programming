@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-/*
- *  main - Print for +ve, _ve and zero
+/**
+ * main - Print for +ve, _ve and zero
  *
  * Return: Always 0 (success)
  */

@@ -1,23 +1,22 @@
 #include "main.h"
 
 /**
- * print_diagonal - Thia prints the diagonal in our code
- * @a: number of times the charater will be printed
- * return: void
+ * print_diagonal - This prints the diagonal in our code
+ * @n: number of times the charater will be printed
  */
-void print_diagonal(int a)
+void print_diagonal(int n)
 {
-	if (a <= 0)
+	if (n <= 0)
 	{
-		_putchar('\a');
+		_putchar('\n');
 	}
 	else
 	{
-		int gap, b;
+		int i, j;
 
-		for (gap = 0; gap < a; gap++)
+		for (i = 0; i < n; i++)
 		{
-			for (b = 0; b < gap; b++)
+			for (j = 0; j < i; j++)
 			{
 				_putchar(' ');
 			}

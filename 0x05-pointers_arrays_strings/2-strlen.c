@@ -1,13 +1,14 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strlen - This helps with the string lenght
+ * _strlen - The string lenght
  * @s: This counts the length
- * return: count
+ * Return: string lenght
  */
 
 int _strlen(char *s)
+
 {
 	int i;
 	int count = 0;

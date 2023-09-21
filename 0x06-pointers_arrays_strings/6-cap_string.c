@@ -1,36 +1,26 @@
 #include <stdio.h>
-#include <string.h>
-#include <time.h>
 #include "main.h"
-#include <ctype.h>
+
 /**
  * *cap_string - Using the string
- * @str: Pointer for the parameter here
- * Return: str
+ * @s: Pointer for the parameter here
+ * Return: s
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int capitalizeNext = 1;
+	int a;
+	int b;
 
-	for (int i = 0; str[i] != '\0'; i++)
+	char magnif[] = " \t\n,;.!?\"(){}";
+
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-				str[i] == ',' || str[i] == ';' || str[i] == '.' ||
-				str[i] == '!' || str[i] == '?' || str[i] == '"' ||
-				str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
-		{
-			capitalizeNext = 1;
-		}
-		else if (capitalizeNext)
-		{
-			str[i] = toupper(str[i]);
-			capitalizeNext = 0;
-		}
-		else
-		{
-			str[i] = tolower(str[i]);
-		}
+		if (s[0] >= 97 && s[0] <= 122)
+			s[0] = s[0] - 32;
+		for (b = 0; magnif[b] != '\0'; b++)
+			if (s[a] == magnif[b] && s[a + 1] >= 97 && s[a + 1] <= 122)
+				s[a + 1] = s[a + 1] - 32;
 	}
-	return (str);
+	return (s);
 }

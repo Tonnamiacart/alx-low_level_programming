@@ -4,8 +4,8 @@
 #include "main.h"
 #include <ctype.h>
 /**
- * cap_string - Using the string
- * @str: Pointer here
+ * *cap_string - Using the string
+ * @str: Pointer for the parameter here
  * Return: str
  */
 

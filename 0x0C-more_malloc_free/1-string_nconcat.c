@@ -9,19 +9,9 @@
  * Return: 0 if failed
  */
 
-unsigned int _strlen(char *s)
-{
-	int i = 0, count = 0;
-
-	for(; s[i] != '\0'; i++)
-		count++;
-
-	return(count);
-}
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, j, len = 0;
+	unsigned int i=0, j;
 	char *concat;
 
 	if (s1 == NULL)
@@ -29,22 +19,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	len = _strlen(s1);
+	while (s1[i] != '\0')
+	{
+		i++;
+	}
 
-	if (n > _strlen(s2) || n == sizeof(s2))
-		n == _strlen(s2);
-	len = len + n;
-	len++;
-
-	concat = malloc(len);
+	concat = malloc((i * sizeof(char)) + n + 1);
 	if (concat == NULL)
-		return (NULL);
+		return (0);
 
-	for (i = 0; s1[i] != '\0'; i++)
-		concat[i] = s1[i];
-
-	for (j = 0; j < n; j++, i++)
-		concat[i] = s2[j];
-	concat[i] = '\0';
-
+	for (j = 0; j < i + n; j++)
+	{
+		if (!(j >= i))
+			concat[j] = s1[j];
+		else
+			concat[j] = s2[j - i];
+	}
+	concat[j] = '\0';
 	return (concat);
+}

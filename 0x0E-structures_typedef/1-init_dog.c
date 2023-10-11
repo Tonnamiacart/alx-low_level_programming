@@ -1,10 +1,11 @@
-#include <stdio.h>
+#include "dog.h"
 /**
  * init_dog - this prototype initializes the dog's function
  * @d: the function dog
  * @name: The name of the dog
  * @age: The dog's age
  * @owner: The owner's name
+ * Return: void
  */
 
 

@@ -1,20 +1,21 @@
 #include "dog.h"
+
+
 /**
- * init_dog - this prototype initializes the dog's function
- * @d: the function dog
- * @name: The name of the dog
- * @age: The dog's age
- * @owner: The owner's name
+ * init_dog - this prototype initializes the dog function
+ * @d: dog function
+ * @name: this is the dog's name
+ * @age: this is the dog's age
+ * @owner: the owner's name
  * Return: void
  */
 
-
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d == NULL)
-		d = malloc(sizeof(struct dog));
-
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
+	if (d)
+	{
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
+	}
 }

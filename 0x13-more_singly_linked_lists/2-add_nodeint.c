@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
- * add_nodeint - function
- * @head: param
- * @n: param
- *
- * Return: Always 0.
+ * add_nodeint - function adds node
+ * @head: pointer to head
+ * @n: carrying a constant integer
+ * Return: 0
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
